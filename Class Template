@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+template<class T>
+class Box {
+    T val;
+public:
+    Box(T v): val(v) {}
+    void show() { cout << val << endl; }
+};
+
+int main() {
+    Box<int> b1(10);
+    Box<string> b2("Hello");
+    b1.show();
+    b2.show();
+}
