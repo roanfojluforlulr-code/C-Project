@@ -1,0 +1,13 @@
+#include <iostream>
+#include <memory>
+using namespace std;
+
+class Demo {
+public:
+    Demo(){ cout << "Created\n"; }
+    ~Demo(){ cout << "Destroyed\n"; }
+};
+
+int main() {
+    unique_ptr<Demo> p = make_unique<Demo>();
+}
