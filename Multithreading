@@ -1,0 +1,10 @@
+#include <iostream>
+#include <thread>
+using namespace std;
+
+void task(int id) { cout << "Thread " << id << endl; }
+
+int main() {
+    thread t1(task, 1), t2(task, 2);
+    t1.join(); t2.join();
+}
