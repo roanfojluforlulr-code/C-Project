@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+class Complex {
+public:
+    int r, i;
+    Complex(int r, int i): r(r), i(i) {}
+    Complex operator+(const Complex &c) {
+        return Complex(r+c.r, i+c.i);
+    }
+};
+
+int main() {
+    Complex a(1,2), b(3,4);
+    Complex c = a+b;
+    cout << c.r << "+" << c.i << "i";
+}
