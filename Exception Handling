@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    try {
+        throw runtime_error("Something wrong");
+    } catch(exception &e) {
+        cout << e.what();
+    }
+}
