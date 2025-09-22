@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+class Demo {
+    int x;
+public:
+    Demo(int x): x(x) {}
+    void show() { cout << this->x << endl; }
+};
+
+int main() {
+    Demo d(42);
+    d.show();
+}
