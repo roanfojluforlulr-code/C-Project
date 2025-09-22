@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+class Box {
+    int size;
+public:
+    Box(int s): size(s) {}
+    Box& operator=(const Box &b) {
+        size = b.size;
+        return *this;
+    }
+    void show(){ cout << size << endl; }
+};
+
+int main() {
+    Box a(10), b(20);
+    b = a;
+    b.show();
+}
