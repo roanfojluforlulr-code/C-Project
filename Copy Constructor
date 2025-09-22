@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+class Box {
+    int size;
+public:
+    Box(int s): size(s) {}
+    Box(const Box &b) { size = b.size; }
+    void show() { cout << "size=" << size << endl; }
+};
+
+int main() {
+    Box b1(10);
+    Box b2 = b1;
+    b2.show();
+}
